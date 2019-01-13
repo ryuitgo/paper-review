@@ -33,9 +33,17 @@ shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾�
   
 * Face track creation
 
-shot내에서 하나하나의 얼굴을 tracking 하지 않고, 효과적으로 face track을 
+![image](https://user-images.githubusercontent.com/23207379/51081834-e7721200-173c-11e9-984f-db7baa3f2624.png)
+
+연속된 프레임에서 두 얼굴 영역이 threshold보다 더 겹치고, 두 얼굴 영역의 face feature간의 distance가 threshold보다 작으면
+같은 얼굴로 간주한다.
+
   
 2. Online face clustering 
+
+![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
+
+
 
 # Performance evaluation
 
