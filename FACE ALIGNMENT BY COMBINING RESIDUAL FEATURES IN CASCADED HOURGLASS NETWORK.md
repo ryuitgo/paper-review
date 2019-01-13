@@ -21,6 +21,7 @@ kernel function으로 ground truth값과, 예측된 밀도 값을 나타내고 �
 # The proposed method
 
 ![image](https://user-images.githubusercontent.com/23207379/51083157-a982e700-1758-11e9-99bb-37a1d500e543.png)
+
 위 구조는 stacked hourglass network 와 residual feature 두 블럭으로 구성됩니다.
 이미지가 입력되면 landmark의 초기 위치를 나타내기 위해 hourglass network를 거치고, 해상도가 같은 heatmap으로 인코딩됩니다. 이 네트워크의 중간 레이어에는 residual feature를 만들기 위한 작은 서브 네트워크가 있습니다. residual feature는 heatmap의 alignment error를 측정하는데 사용됩니다.
 그 결과 heatmap은 matrix를 최적화 하게 학습되고, alignment error를 위한 residual feature는 유클리디안 거리를 이용해서 학습되기 때문에 
@@ -35,6 +36,10 @@ kernel function으로 ground truth값과, 예측된 밀도 값을 나타내고 �
 ### 2. The cascaded hourglass network with Residual feature
 
 ![image](https://user-images.githubusercontent.com/23207379/51083790-2d41d100-1763-11e9-88a3-e5e5652702dc.png)
+
+![image](https://user-images.githubusercontent.com/23207379/51083833-cffa4f80-1763-11e9-8430-f7997c392a94.png)
+
+
 
 # Experiment Results
 
