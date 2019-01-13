@@ -55,7 +55,7 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
 
 ![image](https://user-images.githubusercontent.com/23207379/51081694-08386880-1739-11e9-852f-11cff87f593a.png)
 
-# Conclusion 
-우리는 offline,online에서 가장 성능이 좋은 online clusteirng 방법을 제시했다. 
-우리의 online 방법은 강인한 대표 얼굴을 위해 CNN feature를 사용했고, 몇가지의 spatio-temporal 제약을 두어 sequantial하게 들어오는 얼굴들을 처리했다.
-나아갈 점으로는 클러스터의 대표 얼굴을 선정하는 방법으로 centroid가 아닌 multivariate gausian을 사용하는 것이 있겠다.
+# Review 
+이 논문은 offline 클러스터링보다 성능이 낮은 기존 online 클러스터링과 다르게 offline보다 성능이 높은 online 클러스터링 방법을 제시하고있다. robust한 얼굴 feature를 위해 CNN Deep feature를 사용했고, 몇가지 spatio-temporal trick을 사용해서 효과적으로 face track을 만들고 클러스터링 했다. 
+
+하지만 클러스터링 성능의 비교대상에 내가 리서치한 성능 좋은 알고리듬(DBSCAN, Rank-Order ...)들이 빠져있고 비교적 단순한 Kmeans, GMM을 사용하고 있다는 점에서 과연 논문에서 제시한 방법이 state of the art가 맞는지 의문이다. 또한, 클러스터의 center를 선정하는데 있어 단순히 face feature들의 평균을 구하는것, face track과 클러스터의 유사도를 구하는데 단순히 거리들 평균을 구하는 것을 보고 과연 Real-World Video에 등장하는 많은 face variation을 다 처리할 수 있을지 의문이 들었다. 
