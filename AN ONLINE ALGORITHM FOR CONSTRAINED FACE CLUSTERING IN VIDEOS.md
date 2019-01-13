@@ -1,5 +1,6 @@
 # AN ONLINE ALGORITHM FOR CONSTRAINED FACE CLUSTERING IN VIDEOS
 Prakhar Kulshreshtha, Tanaya Guha
+
 Indian Institute of Technology, Kanpur
 
 # Introduction 
