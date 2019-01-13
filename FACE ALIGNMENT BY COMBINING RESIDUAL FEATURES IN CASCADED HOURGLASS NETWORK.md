@@ -26,7 +26,7 @@ kernel function으로 ground truth값과, 예측된 밀도 값을 나타내고 �
 그 결과 heatmap은 matrix를 최적화 하게 학습되고, alignment error를 위한 residual feature는 유클리디안 거리를 이용해서 학습되기 때문에 
 기존의 학습과 테스트의 모순을 어느정도 완화시키는 효과를 볼 수 있습니다.
 
-1. The weakness of existing FCN architecture
+### The weakness of existing FCN architecture
 
 ![image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
 
