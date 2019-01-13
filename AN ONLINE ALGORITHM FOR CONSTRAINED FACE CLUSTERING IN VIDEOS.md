@@ -18,32 +18,37 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
 우리는 이 논문에서 성능이 offline보다 좋은 online 방법을 소개한다.
 
 # Proposed approach
-online 방법을 설명한다.
 
 1. Face track creation
 
 * Shot boundary detection
 
-shot이란 연속으로 촬영된 프레임으로 정의하고 video를 shot level로 나눈다. 그러기 위해 shot boundary를 detection하는데, 
-연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
+  shot이란 연속으로 촬영된 프레임으로 정의하고 video를 shot level로 나눈다. 그러기 위해 shot boundary를 detection하는데, 
+  연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
   
 * Face detection and Feature extraction
 
-shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
+  shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
   
 * Face track creation
-
-![image](https://user-images.githubusercontent.com/23207379/51081834-e7721200-173c-11e9-984f-db7baa3f2624.png)
-
-연속된 프레임에서 두 얼굴 영역이 threshold보다 더 겹치고, 두 얼굴 영역의 face feature간의 distance가 threshold보다 작으면
-같은 얼굴로 간주한다.
+  ![image](https://user-images.githubusercontent.com/23207379/51081834-e7721200-173c-11e9-984f-db7baa3f2624.png)
+  연속된 프레임에서 두 얼굴 영역이 threshold보다 더 겹치고, 두 얼굴 영역의 face feature간의 distance가 threshold보다 작으면
+  같은 얼굴로 간주한다.
 
   
 2. Online face clustering 
+  ![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
 
-![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
-
-
+  최종적으로 우리가 하고자 하는 것은 각 shot에서 생성한 face track들을 이미 생성된 클러스터에 포함시키거나, 
+  처음 등장한 얼굴이라면 새로운 클러스터로 형성하는 것이다.
+  
+  이때, shot 내에 있는 face track들을 클러스터링 하기 위해 다음을 고려한다.
+  
+  temporal constraint : 한 시점에서 겹치는 face track은 같은 ID가 될 수 없다.
+  similarity matrix : face track과 기존 클러스터간의 거리를 계산
+  face track 클러스터간의 거리 : face track내의 모든 얼굴에 대해서 클러스터의 center와의 거리를 구하고 그 거리들을 평균
+  클러스터의 center : 해당 클러스터에 존재하는 모든 얼굴들의 feature의 평균을 사용한다. 
+   
 
 # Performance evaluation
 
