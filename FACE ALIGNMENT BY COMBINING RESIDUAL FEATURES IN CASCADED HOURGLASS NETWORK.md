@@ -26,51 +26,19 @@ kernel function으로 ground truth값과, 예측된 밀도 값을 나타내고 �
 그 결과 heatmap은 matrix를 최적화 하게 학습되고, alignment error를 위한 residual feature는 유클리디안 거리를 이용해서 학습되기 때문에 
 기존의 학습과 테스트의 모순을 어느정도 완화시키는 효과를 볼 수 있습니다.
 
-### The weakness of existing FCN architecture
+### 1. The weakness of existing FCN architecture
 
 ![image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
 
 ![image](https://user-images.githubusercontent.com/23207379/51083649-f965ac00-1760-11e9-8578-679a4c535c91.png)
 
-2. residual feature
+### 2. The cascaded hourglass network with Residual feature
 
+![image](https://user-images.githubusercontent.com/23207379/51083790-2d41d100-1763-11e9-88a3-e5e5652702dc.png)
+
+# Experiment Results
 
 # Review
-
-# Abstract
-
-흔히 Face Landmark Localization으로 알고있는 Face Alignment에 관한 논문입니다.
-
-논문의 저자는 face alignment에서 Fully Convolutional Networks (FCN)의 kernel function을 사용하는 것을 주목했습니다. 
-
-kernel function의 cross entropy와 pixel-wise L2 Loss가 face alignment error를 정확히 반영하지 못한다고 주장합니다.
-
-이 분석을 기반으로 RF-CHN 방법을 고안했고, 이 방법은 훌륭한 성능을 보인다고 주장합니다.
-
-
-# Introduction
-
-FCN에서는 ground truth probability matrix를 만들기 위해 kernel function을 사용한다. 그리고 이것과 predicted probability matrix 간의
-
-loss 차이를 최소화 되도록 학습한다. 
-
-FCN 학습(training)과정이 predicted matrix와 gt matrix간의 차이를 optimization 하는것이 목적인것과 달리, 
-
-FCN 테스트(testing)에서는 alignment의 quality를 계산하기 위해 유클리디안 거리를 사용한다.
-
-여기서 비롯되는 학습과 테스트에서의 모순이 성능 저하를 야기한다.
-
-이 관찰에 기반해서 우리는 학습과 테스트 각각의 기준을 결합하는 것을 제안했다. 
-
-결국, 학습과 테스트의 모순이 완화됐다. 왜냐하면 heatmap은 matrix difference를 optimizing하게 되고,
-alignment residuals는 유클리디언 거리에 의해 학습되기 때문이다. 
-
-# The Proposed Method & Experiment
-1. The weakness of existing FCN architecture
-
-
-2. The cascaded hourglass network with residual features
-
 
 # Conclusion
 
