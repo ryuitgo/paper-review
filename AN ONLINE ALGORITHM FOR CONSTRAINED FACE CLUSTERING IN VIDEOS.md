@@ -21,15 +21,15 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
 online 방법을 설명한다.
 
 1. Face track creation
-  1-1. Shot boundary detection
-  shot이란 연속으로 촬영된 프레임으로 정의하고 video를 shot level로 나눈다. 그러기 위해 shot boundary를 detection하는데, 
-  연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
+* Shot boundary detection
+shot이란 연속으로 촬영된 프레임으로 정의하고 video를 shot level로 나눈다. 그러기 위해 shot boundary를 detection하는데, 
+연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
   
-  1-2. Face detection and Feature extraction
-  shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
+* Face detection and Feature extraction
+shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
   
-  1-3. Face track creation
-  shot내에서 하나하나의 얼굴을 tracking 하지 않고, 효과적으로 face track을 
+* Face track creation
+shot내에서 하나하나의 얼굴을 tracking 하지 않고, 효과적으로 face track을 
   
 2. Online face clustering 
 
