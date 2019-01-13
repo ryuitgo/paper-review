@@ -47,8 +47,11 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
   이때, shot 내에 있는 face track들을 클러스터링 하기 위해 다음을 고려한다.
   
   temporal constraint : 한 시점에서 겹치는 face track은 같은 ID가 될 수 없다.
+  
   similarity matrix : face track과 기존 클러스터간의 거리를 계산
+  
   face track 클러스터간의 거리 : face track내의 모든 얼굴에 대해서 클러스터의 center와의 거리를 구하고 그 거리들을 평균
+  
   클러스터의 center : 해당 클러스터에 존재하는 모든 얼굴들의 feature의 평균을 사용한다. 
    
 
