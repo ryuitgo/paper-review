@@ -22,7 +22,10 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
 
 
 실험 및 결과
+
 ![an online algorithm for constrained face clustering in videos-1](https://user-images.githubusercontent.com/23207379/51081658-5b5deb80-1738-11e9-828e-c0d2cf87584c.png)
+
+![image](https://user-images.githubusercontent.com/23207379/51081694-08386880-1739-11e9-852f-11cff87f593a.png)
 
 # Conclusion 
 우리는 offline,online에서 가장 성능이 좋은 online clusteirng 방법을 제시했다. 
