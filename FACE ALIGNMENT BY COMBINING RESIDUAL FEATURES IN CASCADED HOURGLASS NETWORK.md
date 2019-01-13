@@ -18,15 +18,24 @@ kernel function으로 ground truth값과, 예측된 밀도 값을 나타내고 �
 저자는 이런 학습과정과 테스트과정의 모순이 성능 저하를 야기한다고 주장합니다. 
 그리고 논문에서 저자는 이런 모순을 완화 시킬 수 있게 학습과정과 테스트과정의 각각 다른 Optimization기준을 결합하는 네트워크 구조를 제시합니다. 
 
-# 
+# The proposed method
 
 ![image](https://user-images.githubusercontent.com/23207379/51083157-a982e700-1758-11e9-99bb-37a1d500e543.png)
+위 구조는 stacked hourglass network 와 residual feature 두 블럭으로 구성됩니다.
+이미지가 입력되면 landmark의 초기 위치를 나타내기 위해 hourglass network를 거치고, 해상도가 같은 heatmap으로 인코딩됩니다. 이 네트워크의 중간 레이어에는 residual feature를 만들기 위한 작은 서브 네트워크가 있습니다. residual feature는 heatmap의 alignment error를 측정하는데 사용됩니다.
+그 결과 heatmap은 matrix를 최적화 하게 학습되고, alignment error를 위한 residual feature는 유클리디안 거리를 이용해서 학습되기 때문에 
+기존의 학습과 테스트의 모순을 어느정도 완화시키는 효과를 볼 수 있습니다.
 
-위 구조는 두 가지 블럭을 가집니다. 
+1. The weakness of existing FCN architecture
 
-1. 
+![image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
+
+![image](https://user-images.githubusercontent.com/23207379/51083649-f965ac00-1760-11e9-8578-679a4c535c91.png)
+
+2. residual feature
 
 
+# Review
 
 # Abstract
 
