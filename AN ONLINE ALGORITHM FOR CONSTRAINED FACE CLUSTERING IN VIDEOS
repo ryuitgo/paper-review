@@ -1,0 +1,35 @@
+AN ONLINE ALGORITHM FOR CONSTRAINED FACE CLUSTERING IN VIDEOS
+
+# Abstract
+현존 하는 성능 좋은 Clustering Algorithm 대부분이 Offline 방법인데, 우리는 성능이 좋은 Online 방법을 제시한다.
+
+@ offline vs online 
+offline clustering : 모든 데이터를 한번에 처리한다.
+online clustering : sequantial 입력되는 데이터를 그때그때 처리.
+
+# Introduction 
+우리는 비디오에 등장하는 얼굴들을 클러스터링 하는것에 흥미를 가졌다. 
+왜냐하면 이것은 video summarization, indexing, retrieval, character analysis 등의 영역에 효과적인 솔루션이 될 수 있기 때문이다.
+하지만 비디오에 등장하는 얼굴들은 scale, pose, illumination, expression, apperance, occlusion 과 같은 상황 때문에 클러스터링 하기가 어렵다.
+
+클러스터링을 잘하기 위해 ~~ 노력이 있었다. 하지만 무엇보다 성능에 중요한것은 효과적으로 대표 얼굴을 나타내는 것이고, CNN을 이용한 Deep feature가
+등장하면서부터 눈에 띄게 성능이 향상되었다.
+
+~ 를 기준으로 나누면
+offline과 online 방법이 존재한다.
+offline은 ~
+online은 ~
+때문에 offline이 명백히 더 어렵다.
+
+현재 높은 성능을 자랑하는 대부분의 방법들은 offline 방법이다. 하지만 전체 데이터를 한번에 볼 수 없는 경우에 매우 유용하다.
+//우리가 알고있는 최고의 online 방법으로 TCCRP가 있다. 하지만 한 사람에 대해 너무 많은 클러스터가 생성되기 때문에 클러스터 결과의 완전성이 떨어진다.
+우리는 이 논문에서 성능이 offline보다 좋은 online 방법을 소개한다.
+
+online 방법 
+실험 및 결과
+
+# Conclusion 
+우리는 offline,online에서 가장 성능이 좋은 online clusteirng 방법을 제시했다. 
+우리의 online 알고리듬은 강인한 대표 얼굴을 위해 CNN feature를 사용했고, 몇가지의 spatio-temporal 제약을 두어 
+sequantial하게 들어오는 얼굴들을 처리했다.
+나아갈 점으로는 클러스터의 대표 얼굴을 선정하는 방법으로 centroid가 아닌 multivariate gausian을 사용하는 것이 있겠다.
