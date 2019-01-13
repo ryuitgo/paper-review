@@ -33,6 +33,7 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
   shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
   
 * Face track creation
+
   ![image](https://user-images.githubusercontent.com/23207379/51081834-e7721200-173c-11e9-984f-db7baa3f2624.png)
   
   연속된 프레임에서 두 얼굴 영역이 threshold보다 더 겹치고, 두 얼굴 영역의 face feature간의 distance가 threshold보다 작으면
