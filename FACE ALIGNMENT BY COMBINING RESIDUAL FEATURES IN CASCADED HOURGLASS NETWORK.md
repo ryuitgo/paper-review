@@ -9,7 +9,7 @@ Hangzhou, 310027, P. R. China
 # Introduction
 Face alignment란 얼굴 이미지 위에 미리 정의된 눈,코,입,외곽선의 위치를 estimation하는 것입니다. 
 최근에는 Fully Connected Network (FCN) 를 사용한 픽셀 레벨의 밀도 추정 방식을 많이 사용합니다.
-이는 다시 말해 데이터로부터 변수가 가질 수 있는 모든 밀도(확률)를 추정하는 것입니다. FCN에서는 이를 위해 kernel function을 이용합니다.
+ 데이터로부터 변수가 가질 수 있는 모든 밀도(확률)를 추정하는 것입니다. FCN에서는 이를 위해 kernel function을 이용합니다.
 kernel function으로 ground truth값과, 예측된 밀도 값을 나타내고 두 값의 difference(loss)를 최소화(Optimization)되게 학습합니다.
 이때, 두 값의 loss를 구하기 위해 cross entropy loss또는 L2 norm loss를 사용합니다. 
 
