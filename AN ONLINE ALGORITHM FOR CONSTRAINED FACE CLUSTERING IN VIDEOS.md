@@ -1,14 +1,15 @@
-AN ONLINE ALGORITHM FOR CONSTRAINED FACE CLUSTERING IN VIDEOS
+# AN ONLINE ALGORITHM FOR CONSTRAINED FACE CLUSTERING IN VIDEOS
+Prakhar Kulshreshtha, Tanaya Guha
+Indian Institute of Technology, Kanpur
 
 # Introduction 
 우리는 비디오에 등장하는 얼굴들을 클러스터링 하는것에 흥미를 가졌다. 
 왜냐하면 이것은 video summarization, indexing, retrieval, character analysis 등의 영역에 효과적인 솔루션이 될 수 있기 때문이다.
 하지만 비디오에 등장하는 얼굴들은 scale, pose, illumination, expression, apperance, occlusion 과 같은 상황 때문에 클러스터링 하기가 어렵다.
 
-클러스터링을 잘하기 위해 여러가지(...) 노력이 있었다. 하지만 무엇보다 성능에 중요한것은 효과적으로 대표 얼굴을 나타내는 것이고, CNN을 이용한 Deep feature가
-등장하면서부터 눈에 띄게 성능이 향상되었다.
+클러스터링을 잘하기 위해 여러가지(...) 노력이 있었다. 하지만 무엇보다 성능에 중요한것은 효과적으로 대표 얼굴을 나타내는 것이고, CNN을 이용한 Deep feature가 등장하면서부터 눈에 띄게 성능이 향상되었다.
 
-데이터를 처리하는 방법에 따라 두 가지로 분류하면 offline과 online 방법이 존재한다.
+클러스터링은 데이터를 처리하는 방법에 따라 두 가지로 분류하면 offline과 online 방법이 존재한다.
 offline은 모든 데이터를 한번에 처리한다.
 online은 모든 데이터를 한번에 알 수 없는 상황에서 sequantial 입력되는 데이터를 그때그때 처리한다.
 online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클러스터 정보를 업데이트 하기 때문에 offline에 비해 더 어렵다.
@@ -17,11 +18,22 @@ online은 offline에 비해 한번에 주어지는 정보가 적고, 매번 클�
 우리는 이 논문에서 성능이 offline보다 좋은 online 방법을 소개한다.
 
 # Proposed approach
+online 방법을 설명한다.
+
 1. Face track creation
+  1. Shot boundary detection
+  shot이란 연속으로 촬영된 프레임으로 정의하고 video를 shot level로 나눈다. 그러기 위해 shot boundary를 detection하는데, 
+  연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
+  
+  2. Face detection and Feature extraction
+  shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
+  
+  3. Face track creation
+  shot내에서 하나하나의 얼굴을 tracking 하지 않고, 효과적으로 face track을 
+  
 2. Online face clustering 
 
-
-실험 및 결과
+# Performance evaluation
 
 ![an online algorithm for constrained face clustering in videos-1](https://user-images.githubusercontent.com/23207379/51081658-5b5deb80-1738-11e9-828e-c0d2cf87584c.png)
 
