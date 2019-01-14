@@ -59,6 +59,23 @@ Face alignment를 CNN으로 학습하는 과정에서 예측된 alignment 결과
 
 # 문제를 해결한 결과는?
 
+CHN, RF-CHN : training subset of the 300-W dataset
+
+CHN-Menpo, RF-CHN-Menpo : training subset of the 300-W and Menpo dataset
+
+![image](https://user-images.githubusercontent.com/23207379/51131281-a0863880-1872-11e9-9355-553fdd25f7f4.png)
+
+---
+
+![image](https://user-images.githubusercontent.com/23207379/51131444-168a9f80-1873-11e9-903a-27d8cd229308.png)
+![image](https://user-images.githubusercontent.com/23207379/51131463-2a360600-1873-11e9-9390-5382595149ae.png)
+
+---
+
+![image](https://user-images.githubusercontent.com/23207379/51131499-42a62080-1873-11e9-84ae-085513d8e589.png)
+
+---
+
 # 결론
 
 
