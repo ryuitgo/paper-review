@@ -11,8 +11,7 @@ Face alignment를 CNN으로 학습하는 과정에서 많은 논문들이 예측
 
 특히 저자는 alignment network 학습 과정과 alignment 결과를 테스트 하는 과정에 모순이 있다고 설명합니다.
 
-둘다 이미지 자르기 
-![image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
+[image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
 
 ![image](https://user-images.githubusercontent.com/23207379/51083649-f965ac00-1760-11e9-8578-679a4c535c91.png)  
   
