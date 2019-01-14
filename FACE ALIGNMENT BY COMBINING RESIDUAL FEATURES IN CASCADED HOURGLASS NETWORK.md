@@ -88,7 +88,7 @@ Face alignment를 CNN으로 학습하는 과정에서 예측된 alignment 결과
 
 ---
 
-# 결론
+
 
 
 
