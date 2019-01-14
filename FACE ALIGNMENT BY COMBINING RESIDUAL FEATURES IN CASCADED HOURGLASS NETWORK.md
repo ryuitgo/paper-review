@@ -2,11 +2,39 @@
 
 Weiliang Chen, Qiang Zhou and Roland Hu
 
-
 College of Information Science and Electronic Engineering, Zhejiang University
 Hangzhou, 310027, P. R. China
 
+# 논문이 제기하는 문제는? 
+  
+Face alignment를 CNN으로 학습하는 과정에서 많은 논문들이 예측된 alignment 결과와 ground truth를 kernel function으로 나타냅니다. 하지만 kernel function을 이용해서 cross-entropy나 L2 norm으로 loss를 계산하는 것이 face alignment의 error를 정확히 반영하지 못한다고 주장합니다.
+
+특히 저자는 alignment network 학습 과정과 alignment 결과를 테스트 하는 과정에 모순이 있다고 설명합니다.
+
+둘다 이미지 자르기 
+![image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
+
+![image](https://user-images.githubusercontent.com/23207379/51083649-f965ac00-1760-11e9-8578-679a4c535c91.png)  
+  
+# 논문이 제기하는 문제가 과연 문제인가?
+
+
+
+
+
+# 그렇다면 과연 논문에서는 문제를 어떻게 해결했는가?
+
+학습 과정에서 최적화 하는 loss가 실제 alignment location error를 정확히 반영하지 못하기 때문에 
+학습 과정에서 alignment error를 반영할 수 있는 loss를 추가하는 방법을 제시합니다.
+
+
+
+# 문제를 해결한 결과 무엇이 바뀌었는가?
+
+# 내 생각
+
 # Introduction
+
 Face alignment란 얼굴 이미지 위에 미리 정의된 눈,코,입,외곽선의 위치를 estimation하는 것입니다. 
 최근에는 Fully Connected Network (FCN) 를 사용한 픽셀 레벨의 밀도 추정 방식을 많이 사용합니다.
 즉, 데이터로부터 변수가 가질 수 있는 모든 밀도(확률)를 추정하는 것입니다. FCN에서는 이를 위해 kernel function을 이용합니다.
