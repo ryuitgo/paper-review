@@ -13,9 +13,15 @@ Face alignment란 얼굴 이미지 위에 미리 정의된 눈,코,입,외곽선
   
 Face alignment를 CNN으로 학습하는 과정에서 예측된 alignment 결과와 ground truth를 kernel function으로 나타냅니다. 하지만 kernel function을 이용해서 cross-entropy나 L2 norm으로 loss를 계산하는 것이 face alignment의 실제 location error를 정확히 반영하지 못한다고 주장합니다.
 
+--
+
 ![image](https://user-images.githubusercontent.com/23207379/51083635-ccb19480-1760-11e9-91af-737b98b45dac.png)
 
+--
+
 ![image](https://user-images.githubusercontent.com/23207379/51083649-f965ac00-1760-11e9-8578-679a4c535c91.png)  
+
+--
 
 특히 저자는 alignment network 학습 과정과 alignment 결과를 테스트 하는 과정에 모순이 있다고 설명합니다.
 학습 과정에서는 ~ but 테스트 과정에서는 ~
@@ -27,7 +33,11 @@ Face alignment를 CNN으로 학습하는 과정에서 예측된 alignment 결과
 
 우선, 네트워크 구조는 다음과 같습니다.
 
+--
+
 ![image](https://user-images.githubusercontent.com/23207379/51083157-a982e700-1758-11e9-99bb-37a1d500e543.png)
+
+--
 
 이 네트워크는 두 가지 블럭을 형성하는데, (1) hourglass network 와 (2) residual feature 입니다.
 
@@ -37,9 +47,15 @@ Face alignment를 CNN으로 학습하는 과정에서 예측된 alignment 결과
 
 (2) residual feature : hourglass network로 부터 얻은 heatmap의 alignment error를 estimation하기 위해 사용
 
+--
+
 ![image](https://user-images.githubusercontent.com/23207379/51130190-c8c06800-186f-11e9-8163-f4de28af70bf.png)
 
+--
+
 ![image](https://user-images.githubusercontent.com/23207379/51130107-90b92500-186f-11e9-93d2-bd56c90ee9f5.png)
+
+--
 
 # 문제를 해결한 결과는?
 
