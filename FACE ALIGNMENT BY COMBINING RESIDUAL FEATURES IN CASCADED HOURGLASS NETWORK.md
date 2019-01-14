@@ -61,15 +61,17 @@ Face alignment를 CNN으로 학습하는 과정에서 예측된 alignment 결과
 
 ---
 
-Data Set
+### Data Set
 
 ![image](https://user-images.githubusercontent.com/23207379/51131859-2c4c9480-1874-11e9-850b-99b4bff05372.png)
 
 ---
 
-CHN, RF-CHN : training subset of the 300-W dataset
+### Our Model
 
-CHN-Menpo, RF-CHN-Menpo : training subset of the 300-W and Menpo dataset
+* CHN, RF-CHN : training subset of the 300-W dataset
+
+* CHN-Menpo, RF-CHN-Menpo : training subset of the 300-W and Menpo dataset
 
 ---
 
