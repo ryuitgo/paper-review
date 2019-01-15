@@ -35,7 +35,7 @@ Indian Institute of Technology, Kanpur
 
 전체 과정을 간략히 살펴보면 
 
-비디오를 우선 shot level로 나누고, 각 shot 별로 얼굴을 detection하고 feature를 뽑는다. 또한, tracking 기법을 이용해서 shot내에서 만들 수 있는 모든 face track을 만든 후, 그 face track들을 클러스터링 한다.
+비디오를 우선 shot level로 나누고, 각 shot 별로 프레임에 등장하는 얼굴을 detection하고 얼굴의 feature를 뽑는다. 그 과정에서 tracking 기법을 이용해서 shot내에 만들 수 있는 모든 face track을 만든 후, 그 face track들을 클러스터링 한다.
 
 ### 1. Shot boundary detection
 
