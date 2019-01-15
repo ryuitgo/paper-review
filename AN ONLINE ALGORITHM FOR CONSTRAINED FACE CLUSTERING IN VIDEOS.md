@@ -5,7 +5,7 @@ Indian Institute of Technology, Kanpur
 
 # 소개
 
-비디오에 등장하는 얼굴을 클러스터링 하는것은 비디오 summarization, indexing, retrieval, character analysis 등의 영역에 효과적인 솔루션이 될 수 있다. 하지만 비디오에 등장하는 얼굴들은 pose, expression, occlusion, apperance 의 다양함 때문에 클러스터링 하기가 쉽지 않다.
+비디오에 등장하는 얼굴을 클러스터링 하는것은 비디오 summarization, indexing, retrieval, character analysis 등의 에 효과적인 솔루션이 될 수 있다. 하지만 비디오에 등장하는 얼굴들은 pose, expression, occlusion, apperance 의 다양함 때문에 클러스터링 하기가 쉽지 않다.
 
 클러스터링은 데이터를 처리하는 과정에 따라 두 가지로 분류하면 offline과 online 방법이 존재한다.
 
