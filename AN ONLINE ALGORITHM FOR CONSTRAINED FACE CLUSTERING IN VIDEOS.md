@@ -13,7 +13,7 @@ Indian Institute of Technology, Kanpur
 비디오에 등장하는 얼굴을 클러스터링 하는것은 비디오 summarization, indexing, retrieval, character analysis 등의 분야에 효과적인 솔루션이 될 수 있다. 하지만 비디오에 등장하는 얼굴들은 pose, expression, occlusion, apperance 의 다양함 때문에 클러스터링 하기가 쉽지 않다.
 
 
-# 논문이 제기하는 문제는? 
+# 제기하는 문제는? 
 
 데이터를 처리하는 방법에 따라 클러스터링을 분류하면 offline clustering 과 online clustering 이 있다.
 
@@ -23,7 +23,7 @@ Indian Institute of Technology, Kanpur
 
 실제 현실에서는 모든 데이터가 한번에 주어지지 않거나 데이터의 양이 많아서 한번에 처리하기 어렵기 때문에 offline 방식보다는 online 방식이 적합하다. 하지만 online은 offline보다 어렵기 때문에 offline 만큼의 성능을 보이기 어렵다.
 
-# 논문에서는 문제를 어떻게 해결했는가?
+# 문제를 어떻게 해결했는가?
 
 이 논문은 성능이 좋은 online clustering 알고리듬을 제시한다. 
 
@@ -61,13 +61,13 @@ shot이 바뀔 때, shot내에 있는 face track들을 이미 생성된 클러�
 
 ---
 
-# 문제를 해결한 결과는?
+# 결과
 
 ![an online algorithm for constrained face clustering in videos-1](https://user-images.githubusercontent.com/23207379/51081658-5b5deb80-1738-11e9-828e-c0d2cf87584c.png)
 
 ![image](https://user-images.githubusercontent.com/23207379/51081694-08386880-1739-11e9-852f-11cff87f593a.png)
 
-# Review 
+# 정리 
 클러스터링 성능의 비교대상이 
 이 논문은 offline 클러스터링보다 성능이 낮은 기존 online 클러스터링과 다르게 offline보다 성능이 높은 online 클러스터링 방법을 제시하고있다. robust한 얼굴 feature를 위해 CNN Deep feature를 사용했고, 몇가지 spatio-temporal trick을 사용해서 효과적으로 face track을 만들고 클러스터링 했다. 
 
