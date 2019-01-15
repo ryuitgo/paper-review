@@ -63,7 +63,9 @@ shot이 바뀔 때, shot내에 있는 face track들을 이미 생성된 클러�
 
 ![an online algorithm for constrained face clustering in videos-1](https://user-images.githubusercontent.com/23207379/51081658-5b5deb80-1738-11e9-828e-c0d2cf87584c.png)
 
-![image](https://user-images.githubusercontent.com/23207379/51081694-08386880-1739-11e9-852f-11cff87f593a.png)
+V measure [0~1] : entropy based measure of cluster homogeneity and completeness
+
+F score [0~1] : geometric mean of precision and recall 
 
 # 정리 
 클러스터링 성능의 비교대상이 
