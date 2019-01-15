@@ -71,4 +71,4 @@ shot이 바뀔 때, shot내에 있는 face track들을 이미 생성된 클러�
 클러스터링 성능의 비교대상이 
 이 논문은 offline 클러스터링보다 성능이 높은 online 클러스터링 방법을 제안하고있다. robust한 얼굴 feature를 위해 CNN Deep feature를 사용하고, spatio-temporal 기법을 사용해서 효과적으로 face track을 만들고 클러스터링 했다. 
 
-하지만 클러스터링 성능의 비교대상(Kmeans, Gausian Mixture Model)을 살펴 보면 비교적 최근에 성능이 좋아서 발표된 클러스터링 알고리듬(DBSCAN, Rank-Order ...)들이 빠져있다는 점에서 이 알고리듬의 성능이 state of the art가 맞는지 의문이 생긴다. 또한, 클러스터의 center를 단순히 face feature들의 평균으로 정하고, face track과 클러스터의 유사도를 구하는데 단순히 거리들 평균을 구한다는 점에서 새롭게 느껴지는 것이 없었다.
+하지만 클러스터링 성능의 비교대상(Kmeans, Gausian Mixture Model)을 살펴 보면 최근에 성능이 좋다고 알려진 알고리듬(DBSCAN, Rank-Order ...)들이 빠져있다는 점에서 논문의 알고리듬 성능이 state of the art가 맞는지 의문이 생긴다. 또한, 클러스터의 center를 단순히 face feature들의 평균으로 정하고, face track과 클러스터의 유사도를 구하는데 단순히 거리들 평균을 구한다는 점에서 새롭게 느껴지는 것이 없었다.
