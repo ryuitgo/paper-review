@@ -25,18 +25,15 @@ Indian Institute of Technology, Kanpur
 
 이 논문은 성능이 좋은 online clustering 알고리듬을 제시한다. 
 
-![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
-
 1. Face track creation
 
 * Shot boundary detection
 
-shot이란 연속으로 촬영된 프레임으로 정의하고 video를 shot level로 나눈다. 그러기 위해 shot boundary를 detection하는데, 
-연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
+우선 video를 shot(연속으로 촬영된 프레임) level로 나눈다. 이를 위해 shot boundary를 detection해야되는데, 연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
   
 * Face detection and Feature extraction
 
-shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
+shot level로 나눈 비디오에서 각 shot별로 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
   
 * Face track creation
 
@@ -46,6 +43,8 @@ shot boundary를 찾은 후엔 해당 shot에 존재하는 모든 얼굴을 찾�
 같은 face track으로 간주한다.
   
 2. Online face clustering 
+
+![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
 
 최종적으로 우리가 하고자 하는 것은 각 shot에서 생성한 face track들을 이미 생성된 클러스터에 포함시키거나, 
 처음 등장한 얼굴이라면 새로운 클러스터로 형성하는 것이다.
