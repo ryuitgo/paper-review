@@ -27,8 +27,6 @@ Indian Institute of Technology, Kanpur
 
 성능이 좋은 online clustering 알고리듬을 소개한다. 
 
----
-
 ### Shot boundary detection
 
 shot : 지속적으로 촬영된 프레임들의 연속 (프레임간의 변화가 심하지 않은 범위 내의 프레임들)
