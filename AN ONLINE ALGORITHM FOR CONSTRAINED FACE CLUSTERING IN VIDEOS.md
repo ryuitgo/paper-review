@@ -25,7 +25,7 @@ Indian Institute of Technology, Kanpur
 
 # 문제를 어떻게 해결했는가?
 
-성능이 좋은 online clustering 알고리듬을 소개한다. 
+성능이 좋은 online clustering 알고리듬을 다음과 같이 제시한다. 
 
 ### Shot boundary detection
 
