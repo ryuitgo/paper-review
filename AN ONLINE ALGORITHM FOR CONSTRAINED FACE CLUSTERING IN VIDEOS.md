@@ -25,9 +25,7 @@ Indian Institute of Technology, Kanpur
 
 # 문제를 어떻게 해결했는가?
 
-이 논문은 성능이 좋은 online clustering 알고리듬을 제시한다. 
-
-![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
+성능이 좋은 online clustering 알고리듬을 소개한다. 
 
 ---
 
@@ -52,6 +50,8 @@ face track : tracking을 사용해서 shot내에서 같은 사람이라고 판�
 temporal constraint : 한 시점에서 겹치는 face track은 같은 사람일 수가 없다.
 
 ### Online face clustering 
+
+![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
 
 shot이 바뀔 때, shot내에 있는 face track들을 이미 생성된 클러스터에 포함시키거나, 처음 등장한 얼굴인 경우 새로운 클러스터로 등록한다.
 
