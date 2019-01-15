@@ -17,13 +17,9 @@ Indian Institute of Technology, Kanpur
 
 데이터를 처리하는 방법에 따라 클러스터링을 분류하면 offline clustering 과 online clustering 이 있다.
 
----
-
 * offline clustering : 모든 데이터가 주어져서 한 번에 클러스터링 한다.
 
 * online clustering : 모든 데이터가 한 번에 주어지지 않고 sequantial하게 입력되는 데이터를 그때그때 클러스터링해서 클러스터의 상태를 업데이트 한다.
-
----
 
 실제 현실에서는 모든 데이터가 한번에 주어지지 않거나 데이터의 양이 많아서 한번에 처리하기 어렵기 때문에 offline 방식보다는 online 방식이 적합하다. 하지만 online은 offline보다 어렵기 때문에 offline 만큼의 성능을 보이기 어렵다.
 
