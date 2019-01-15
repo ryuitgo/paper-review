@@ -33,39 +33,38 @@ Indian Institute of Technology, Kanpur
 
 ![image](https://user-images.githubusercontent.com/23207379/51081843-0ec8df00-173d-11e9-8873-07f3f8389fe9.png)
 
-전체 과정을 간략히 살펴보면 
+---
 
-비디오를 우선 shot level로 나누고, 각 shot 별로 프레임에 등장하는 얼굴을 detection하고 얼굴의 feature를 뽑는다. 그 과정에서 tracking 기법을 이용해서 shot내에 만들 수 있는 모든 face track을 만든 후, 그 face track들을 클러스터링 한다.
+### Shot boundary detection
 
-### 1. Shot boundary detection
+shot : 지속적으로 촬영된 프레임들의 연속 (프레임간의 변화가 심하지 않은 범위 내의 프레임들)
 
-우선 video를 shot(연속으로 촬영된 프레임) level로 나눈다. 이를 위해 shot boundary를 detection해야되는데, 연속된 두 프레임간에 픽셀들의 평균의 차가 threshold보다 높으면 shot boundary로 간주한다.
-  
-### 2. Face detection and Feature extraction
+shot을 구분하기 위해 shot boundary를 detection해야되는데, 연속된 두 프레임간 픽셀들의 차를 평균한 값이 지정된 threshold보다 높으면 shot boundary로 간주한다.
 
-shot level로 나눈 비디오에서 각 shot별로 존재하는 모든 얼굴을 찾고, 얼굴의 feature를 뽑는다.
-  
-### 3. Face track creation
+### Face detection and Feature extraction
+
+프레임에 등장하는 모든 얼굴의 detection결과와 feature(FaceNet)를 뽑는다.
+
+### Face track creation
+
+face track : tracking을 사용해서 shot내에서 같은 사람이라고 판단한 얼굴들
+
+얼굴이 연속된 두 프레임에 걸쳐 존재할때, 두 얼굴 영역이 일정 값 이상 겹치고, 그 두 영역의 face feature간의 euclidean distance가 일정 값 보다 작으면 같은 face track으로 간주한다.
+
+temporal constraint : 한 시점에서 겹치는 face track은 같은 사람일 수가 없다.
+
+### Online face clustering 
+
+shot이 바뀔 때, shot내에 있는 face track들을 이미 생성된 클러스터에 포함시키거나, 처음 등장한 얼굴인 경우 새로운 클러스터로 등록한다.
+
+그러기 위해서는 존재하는 클러스터와 face track간의 가까운 정도를 구할 수 있어야 되는데, 논문에서는 face track내에 존재하는 모든 얼굴 각각에 대해서 클러스터의 center와의 euclidean distance를 구하고 이를 평균한 값으로 클러스터와 face track의 가까운 정도를 나타낸다.
+
+클러스터의 center는 클러스터에 속한 모든 얼굴들의 feature vector를 평균한 vector를 사용하고, 새로운 face track이 클러스터에 추가되면 클러스터의 center를 업데이트 한다.
+
+---
 
 ![image](https://user-images.githubusercontent.com/23207379/51081834-e7721200-173c-11e9-984f-db7baa3f2624.png)
 
-연속된 프레임에서 두 얼굴 영역의 겹치는 정도가 t1이상이고, 그 두 얼굴 영역의 face feature간의 distance가 t2보다 작으면
-같은 face track으로 간주한다.
-  
-### 4. Online face clustering 
-
-생성된 face track들을 이미 생성된 클러스터에 포함시키거나, 처음 등장한 얼굴인 경우 새로운 클러스터로 등록하는 과정이다.
-
-그러기 위해서는 클러스터와 face track간의 가까운 정도를 구할 수 있어야 되는데, 논문에서는 face track내에 존재하는 모든 얼굴 각각에 대해서 클러스터의 center와의 euclidean distance를 구하고 이를 평균한 값으로 클러스터와 face track의 가까운 정도를 나타낸다.
-클러스터의 center는 클러스터에 속한 모든 얼굴들의 feature vector를 평균한 vector를 사용하고, 새로운 얼굴이 클러스터링 될때마다 해당 클러스터의 center를 업데이트 한다.
-
-temporal constraint : 한 시점에서 겹치는 face track은 같은 ID가 될 수 없다.
-
-similarity matrix : face track과 기존 클러스터간의 거리를 계산
-
-face track 클러스터간의 거리 : face track내의 모든 얼굴에 대해서 클러스터의 center와의 거리를 구하고 그 거리들을 평균
-
-클러스터의 center : 해당 클러스터에 존재하는 모든 얼굴들의 feature의 평균을 사용한다. 
 
 # 문제를 해결한 결과는?
 
