@@ -29,7 +29,7 @@ Indian Institute of Technology, Kanpur
 
 ### Shot boundary detection
 
-shot : 지속적으로 촬영된 프레임들의 연속 (프레임간의 변화가 심하지 않은 범위 내의 프레임들)
+shot : 연속된 프레임간의 변화가 심하지 않는 프레임들의 범위)
 
 shot을 구분하기 위해 shot boundary를 detection해야되는데, 연속된 두 프레임간 픽셀들의 차를 평균한 값이 지정된 threshold보다 높으면 shot boundary로 간주한다.
 
@@ -43,9 +43,9 @@ face track : tracking을 사용해서 shot내에서 같은 사람이라고 판�
 
 얼굴이 연속된 두 프레임에 걸쳐 존재할때, 두 얼굴 영역이 일정 값 이상 겹치고, 그 두 영역의 face feature간의 euclidean distance가 일정 값 보다 작으면 같은 face track으로 간주한다.
 
-temporal constraint : 한 시점에서 겹치는 face track은 같은 사람일 수가 없다.
-
 ![image](https://user-images.githubusercontent.com/23207379/51081834-e7721200-173c-11e9-984f-db7baa3f2624.png)
+
+temporal constraint : 한 시점에서 겹치는 face track은 같은 사람일 수가 없다.
 
 ### Online face clustering 
 
