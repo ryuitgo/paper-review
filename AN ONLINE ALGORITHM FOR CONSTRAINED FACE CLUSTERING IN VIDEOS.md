@@ -37,7 +37,7 @@ online clustering을 위해서는 클러스터링을 언제 할 것인가에 대
 
 ### Face track creation
 
-face track : tracking을 사용해서 shot내에서 같은 사람이라고 판단한 얼굴들
+face track : tracking을 적용해서 shot내에서 tracking된 얼굴들의 집합
 
 얼굴이 연속된 두 프레임에 걸쳐 존재할때, 두 얼굴 영역이 일정 값 이상 겹치고, 그 두 영역의 face feature간의 euclidean distance가 일정 값 보다 작으면 같은 face track으로 간주한다.
 
