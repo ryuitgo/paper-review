@@ -29,9 +29,7 @@ Indian Institute of Technology, Kanpur
 
 ### Shot boundary detection
 
-shot : 연속된 프레임간의 변화가 심하지 않는 프레임들의 범위)
-
-shot을 구분하기 위해 shot boundary를 detection해야되는데, 연속된 두 프레임간 픽셀들의 차를 평균한 값이 지정된 threshold보다 높으면 shot boundary로 간주한다.
+online clustering을 위해서는 클러스터링을 언제 할 것인가에 대한 이슈가 있다. 예를 들어 매 프레임마다 혹은 100프레임마다 한번 클러스터링 한다는 기준이 필요하다. 여기서는 전체 프레임을 shot 단위로 구분한다. shot이란 연속된 프레임간의 변화가 크지 않은 프레임들의 범위로 정의한다. shot 단위로 구분하기 위해 shot boundary를 detection하는데, 연속된 두 프레임간의 픽셀들의 차를 평균한 값이 지정된 threshold보다 높으면 shot boundary로 간주한다.
 
 ### Face detection and Feature extraction
 
