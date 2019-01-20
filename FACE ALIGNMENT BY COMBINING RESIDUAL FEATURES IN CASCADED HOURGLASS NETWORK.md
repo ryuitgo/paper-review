@@ -67,15 +67,15 @@ objective function
 
 * CHN, RF-CHN : training subset of the 300-W dataset
 
-* CHN-Menpo, RF-CHN-Menpo : training subset of the 300-W and Menpo dataset
-
 ---
 
-![image](https://user-images.githubusercontent.com/23207379/51131281-a0863880-1872-11e9-9355-553fdd25f7f4.png)
+![image](https://user-images.githubusercontent.com/23207379/51439493-41a34200-1cfe-11e9-9586-cddfbc050f22.png)
 
 ---
 
 ![image](https://user-images.githubusercontent.com/23207379/51131444-168a9f80-1873-11e9-903a-27d8cd229308.png)
+
+
 ![image](https://user-images.githubusercontent.com/23207379/51131463-2a360600-1873-11e9-9390-5382595149ae.png)
 
 ---
