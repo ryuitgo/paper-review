@@ -73,20 +73,6 @@ objective function
 
 ---
 
-![image](https://user-images.githubusercontent.com/23207379/51131444-168a9f80-1873-11e9-903a-27d8cd229308.png)
-
-
-![image](https://user-images.githubusercontent.com/23207379/51131463-2a360600-1873-11e9-9390-5382595149ae.png)
-
----
-
 ![image](https://user-images.githubusercontent.com/23207379/51131499-42a62080-1873-11e9-84ae-085513d8e589.png)
 
 ---
-
-
-
-
-
----
-
